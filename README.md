@@ -8,8 +8,10 @@
 
 ## Get Started
 
+The below expects a development environment (NPM, Node etc)
+
 * Install dependancies - `npm i`
-* Run Start Script - `npm start -s` - the application should built, run the tests and then run on port 3000, opening in your default browser 
+* Run Start Script - `npm start -s` - the application should build, run the tests and then run on port 3000, opening in your default browser 
 * Problems? - [Bolierplate Docs](https://github.com/coryhouse/react-slingshot/blob/master/README.md) or call me on 07538075092
 
 
