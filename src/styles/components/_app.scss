@@ -1,0 +1,35 @@
+$blue: #3498db;
+
+.appContainer {
+  .menuBar {
+    width: 100%;
+    background: #3498db;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .title {
+      color: #efefef;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.4s, border-color 0.4s;
+      border-bottom: 1px solid $blue;
+
+      &:hover {
+        color: #fff;
+
+        border-color: #fff;
+      }
+    }
+
+  }
+
+  .appContent {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

@@ -1,0 +1,11 @@
+@import './reset';
+@import '../../node_modules/font-awesome/css/font-awesome.min.css';
+
+#app {
+  @import './utils';
+  @import 'components/app';
+  @import 'components/configLoading';
+  @import 'components/search';
+  @import 'components/movie';
+  @import 'components/favourites';
+}

@@ -1,0 +1,70 @@
+$width: 800px;
+
+.movie {
+  width: $width;
+
+  .movieMessage {
+    @extend .muted;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    box-sizing: border-box;
+    width: $width/2;
+    padding: 0 10px;
+
+  }
+
+  .moviePoster {
+    max-width: ($width/2) - 40;
+  }
+
+  .castTable {
+    width: 100%;
+
+    td {
+      vertical-align: middle;
+      &:nth-child(3) {
+        text-align: right;
+        padding-right: 10px;
+      }
+    }
+
+    tr:nth-child(odd) {
+      background: #f1f1f1;
+    }
+  }
+
+  .castPicCell {
+    width: 32px;
+    height: 48px;
+  }
+
+  .castPic {
+    @extend .castPicCell;
+    margin-right: 10px;
+  }
+
+  .overview {
+    margin-top: 20px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .titleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+
+}
