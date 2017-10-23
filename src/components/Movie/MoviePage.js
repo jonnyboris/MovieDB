@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MovieDetails from './MovieDetails';
 import CastMember from './CastMember';
+import YouTube from 'react-youtube';
 
 class Movie extends React.Component {
 
@@ -18,6 +19,14 @@ class Movie extends React.Component {
   render() {
     const {movie} = this.props;
     const {details} = this.props.movie;
+
+    const videoOpts = {
+      height: '390',
+      width: '640',
+      playerVars: {
+        autoplay: 0
+      }
+    };
 
     return(
       <div className="movie">
@@ -39,6 +48,15 @@ class Movie extends React.Component {
               />
             </div>
           </div>
+
+          {movie.trailer.loaded &&<div>
+            <h2>Trailer</h2>
+
+            <YouTube
+              videoId={movie.trailer.key}
+              opts={videoOpts}
+            />
+          </div>}
 
           <div>
             <div>

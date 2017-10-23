@@ -14,7 +14,7 @@ const FavouritesContainer = (props) => {
         ))}
       </ol>
 
-      {!favourites.length && <p className="muted">No favourites added</p>}
+      {!favourites.length && <p className="muted" style={{textAlign: 'center', marginTop: '10px'}}>No favourites added. <br/>Press <i className="fa fa-star-o favStar " aria-hidden="true" /> to add a favourite</p>}
     </div>
   );
 };

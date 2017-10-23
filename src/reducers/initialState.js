@@ -23,7 +23,7 @@ export default {
   movie: {
     details: {},
     cast: {},
-    videos: [],
+    trailer: {loaded: false},
 
     loading: true,
     message: "Loading movie"

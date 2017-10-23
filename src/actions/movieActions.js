@@ -21,6 +21,20 @@ export function getCast(id) {
         //https://www.quora.com/Approximately-what-percent-of-films-have-more-than-one-director
         const director = _.find(data.crew, member => member.job.toLowerCase() === 'director');
         dispatch(updateMovie({cast: {...data, director}, loading: false}));
+        dispatch(getVideos(id));
+      })
+      .catch(e => dispatch(updateMovie({message: `Failed to load cast, please try refreshing the page (${e.message})`})));
+  };
+}
+
+export function getVideos(id) {
+  return function (dispatch) {
+    Api.getVideos(id)
+      .then(data => {
+        const trailer = _.find(data.results, video => (video.type.toLowerCase() === 'trailer' && video.site === 'YouTube'));
+        if(trailer) {
+          dispatch(updateMovie({trailer: {loaded: true, ...trailer}}));
+        }
       })
       .catch(e => dispatch(updateMovie({message: `Failed to load cast, please try refreshing the page (${e.message})`})));
   };

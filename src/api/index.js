@@ -2,7 +2,7 @@ import fetchJsonp from 'fetch-jsonp';
 
 class Api {
   constructor() {
-    this.base = 'http://api.themoviedb.org/3';
+    this.base = 'https://api.themoviedb.org/3';
     this.api_key = '389bc583121f268d96efb0fda3906dca';
   }
 
@@ -18,6 +18,11 @@ class Api {
 
   getCast(id) {
     const url = this._getFullUrl(`/movie/${id}/credits`);
+    return this._getJSONP(url);
+  }
+
+  getVideos(id) {
+    const url = this._getFullUrl(`/movie/${id}/videos`);
     return this._getJSONP(url);
   }
 

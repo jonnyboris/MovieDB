@@ -29,7 +29,8 @@ describe('SearchPage', () => {
         details: {},
         cast: {
           cast: [{}, {}, {}]
-        }
+        },
+        trailer: {loaded: false}
       },
       favouriteIds: {},
       addFav: ()=> {},
