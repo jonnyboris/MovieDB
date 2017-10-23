@@ -1,8 +1,8 @@
 # Movie DB Coding Test
 
-[Demo](http://example.com/)
 
-![alt text](https://i.gyazo.com/28d1cae33048bd1333f35c444ef53b95.gif)
+
+![Demo](https://i.gyazo.com/28d1cae33048bd1333f35c444ef53b95.gif)
 
 
 
@@ -18,6 +18,7 @@
 
 This is based off the react slingshot boiler plate, all the npm scripts, babel config etc
 are the defaults from the slingshot project. Everything in /src was written for the test.
+(Apart from index.js (App entry point), Root.js, store/)
 
 points to note:
 
@@ -26,4 +27,10 @@ ensures that the [Movie DB config](https://developers.themoviedb.org/3/configura
 is loaded before the application mounts. The movie DB config contains
 image base URLs and sizes that all subsequent requests rely on. 
 
+* Press the star icon on the results page or on the movie page to add to
+favourites.
+
+* I have put some effort into the layout, however given the expected time
+frame I have not made it fully responsive. Its best view on a PC. 
+(Although it does scale down some what)
 
